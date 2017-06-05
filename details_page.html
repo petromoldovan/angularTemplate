@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="images/favicon.ico">
+        <title>Starbag</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    	<!--[if lt IE 9]>
+        	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!--AngularJS-->
+        <script src="bower_components/pdfjs-dist/build/pdf.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-pdf-viewer/dist/angular-pdf-viewer.min.js"></script>
+
+
+        <script type="text/javascript" src="js/controller/controller.js"></script>
+        <!--AngularJS-->
+
+        <!-- Core JS Files -->
+
+        <link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+        <script type="text/javascript" src="js/jquery.min.1.11.3.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- Core JS Files -->
+
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+
+	</head>
+    <body ng-app="App" id="detailsPage">
+    <!-- Header Area Starts -->
+    <header class="site_header" id="site_header">
+    	<section class="site_top_bar">
+        	<article class="container">
+            	<div class="row">
+                	<div class="top_bar_links text-right">
+                    	<div class="login_btn inline_block">
+                        	<a href="javascript:void(0);"><i class="icon_sprite login_icon"></i>Max Power</a>
+                        </div>
+                        <div class="message_btn inline_block">
+                        	<a href="javascript:void(0);"><span class="inline_block"><i class="icon_sprite message_icon"></i><span class="msg_counts text-center">2</span></span>Posteingang</a>
+                        </div>
+                        <div class="help_btn inline_block">
+                        	<a href="javascript:void(0);"><i class="icon_sprite help_icon"></i>Help</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="main_header">
+        	<article class="container">
+            	<div class="row clearfix">
+                	<div class="col-md-2">
+                    	<div class="site_logo">
+                        	<a href="javascript:void(0);"><img src="images/starbag_logo.jpg" title="Starbag" alt="Starbag" class="img-responsive"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                    	<div class="navigations text-right">
+                            <nav class="navbar">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div id="navbar" class="collapse navbar-collapse">
+                                	<ul class="nav navbar-nav">
+                                        <li class="menu_icon_01 active"><a href="javascript:void(0);">Lorem</a></li>
+                                        <li class="menu_icon_02"><a href="javascript:void(0);">Link Archiv</a></li>
+                                        <li class="menu_icon_03"><a href="javascript:void(0);">Datenansicht</a></li>
+                                        <li class="menu_icon_03"><a href="javascript:void(0);">Alert Konfiguration</a></li>
+                                        <li class="menu_icon_04"><a href="javascript:void(0);">Data Upload</a></li>
+                                	</ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                    	<div class="eucon_logo text-right">
+                    		<a href="javascript:void(0);"><img src="images/eucon_logo.png" title="Eucon" alt="Eucon"></a>
+                    	</div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </header>
+    <!-- Header Area Ends -->
+    
+    <!-- Main Content Starts -->
+    <section class="mega_wrapper" id="mega_wrapper">
+    	<article class="container">
+        	<div class="row">
+            	<div class="pagination_box">
+                	<ul>
+                    	<li class="home_link"><a href="javascript:void(0);">Zurück</a></li>
+                        <li><a href="javascript:void(0);">Home</a></li>
+                        <li><a href="javascript:void(0);">Etiam Lobortis</a></li>
+                        <li class="active"><a href="javascript:void(0);">Sed felis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <article class="filter_details_section">
+        	<div class="container">
+            	<div class="row">
+                	<div class="row filter_mega_panels details_page clearfix">
+                    	<div class="col-md-4 fall_btn_grup_box">
+                            <div class="filter_box_title clearfix">
+                                <div class="col-sm-6"><span class="filter_box_title_span"><i class="icon_sprite meter_icon"></i>Fall 1234</span></div>
+                                <div class="col-sm-6 text-right"></div>
+                            </div>
+                            <div class="fall_btn_grup text-center clearfix">
+                            	<div class="col-md-6">
+                                	<div class="fall_btns" id="zurueckweisen">
+                                		<a class="fall_btn_01"><i></i>zurückweisen</a>
+                                    </div>
+                                    <div id="divpopup" style="display:none">
+                                        <select id="popupDrop">
+                                            <option value="volvo">Thema</option>
+                                            <option value="volvo">Volvo</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="audi">Audi</option>
+                                        </select><br/>
+                                        <textarea id="popupText" placeholder="Kommentare hinzufügen"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                	<div class="fall_btns">
+                                		<a href="javascript:void(0);" class="fall_btn_02"><i></i>Zuweisen</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                	<div class="fall_btns">
+                                		<a href="javascript:void(0);" class="fall_btn_03"><i class="icon_sprite"></i>ablehnen</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                	<div class="fall_btns">
+                                		<a href="javascript:void(0);" class="fall_btn_04 active"><i></i>Fall abschliessen</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="new_filter_tabbing">
+                            	<div class="filters_tabbing">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active"><a href="#informationen" aria-controls="fall" role="tab" data-toggle="tab">informationen</a></li>
+                                        <li role="presentation"><a href="#notizen" aria-controls="notizen" role="tab" data-toggle="tab">Notizen</a></li>
+                                        <li role="presentation"><a href="#verknüpfte_falle" aria-controls="verknüpfte_falle" role="tab" data-toggle="tab">Verknüpfte Fälle</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="informationen">
+                                        	<div class="filter_accord_content">
+                                                <div class="filter_accord_padd">
+                                                    <div class="row clearfix">
+                                                        <div class="col-md-6">
+                                                            <ul class="accord_info_lists">
+                                                                <li>
+                                                                    <div class="row clearfix">
+                                                                        <div class="col-xs-8">Kostenstelle</div>
+                                                                        <div class="col-xs-4 text-right">1234</div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="row clearfix">
+                                                                        <div class="col-xs-8">Buchungsstatus</div>
+                                                                        <div class="col-xs-4 text-right">5678</div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="row clearfix">
+                                                                        <div class="col-xs-8">Objekt ID</div>
+                                                                        <div class="col-xs-4 text-right">8891</div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="accord_info_txt">
+                                                                <p>Kostenstelle<br><span>Titel der Sache etwas länger</span></p>
+                                                            </div>
+                                                            <div class="accord_info_txt">
+                                                                <p>Kostenstelle<br><span>Titel</span></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="accord_info_pic"></div>
+                                                            <div class="accord_info_txt">
+                                                                <p>Kostenstelle<br><span> Titel der Sache </span></p>
+                                                            </div>
+                                                            <div class="accord_info_txt">
+                                                                <p>Kostenstelle<br><span>Titel der Sache etwas länger</span></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="custom_checkbox">
+                                                                <label for="umlagefähig"><input type="checkbox" name="umlagefähig" id="umlagefähig" value="Umlagefähig"><span class="checkbox_tick"></span>Umlagefähig</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="notizen">
+                                        	<div class="filter_accord_content">
+                                                <div class="filter_accord_padd">
+
+                                                    <div ng-controller="notesBlog">
+                                                       <ul class="notesBlogUl">
+                                                           <li class="notesList" ng-repeat="note in notes">
+                                                               <p>{{note.user}} wrote at {{date|date:'yyyy-MM-dd'}}:</p></br>
+                                                               <textarea class="detailsNotes" id={{note.id}} disabled="disabled">{{note.message}}</textarea>
+                                                           </li>
+                                                       </ul>
+
+                                                        <input type="text" ng-model="newNote" id="notesInput">
+
+                                                        <div>
+                                                            <button type="submit" ng-click="addNote()">Abschicken</button>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="verknüpfte_falle">
+                                        	<div class="filter_accord_content">
+                                                <div class="filter_accord_padd"><p>Section 03 Content</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="filter_box_title clearfix">
+                                <div class="col-sm-12">
+                                	<span class="filter_box_title_span"><i class="doller_icon"></i>Rechnung</span>
+                                    <span id="pdfLink"><a href="pdf/sample_pdf.pdf" target="_blank">In neuem Tab öffnen</a></span>
+                                </div>
+                            </div>
+
+                            <div ng-controller="AppCtrl">
+                                <pdf-viewer
+                                        delegate-handle="my-pdf-container"
+                                        url="pdfUrl"
+                                        scale="1"
+                                        show-toolbar="true"
+                                </pdf-viewer>
+                            </div>
+
+                        </div>
+                        <div class="col-md-2 scrolling_alerts">
+                            <div class="filter_box_title clearfix">
+                                <div class="col-sm-12">
+                                	<span class="filter_box_title_span"><i class="icon_sprite alert_icon"></i>Alerts</span>
+                                </div>
+                            </div>
+                            <div class="scrolling_alert_boxes">
+                            	<div class="alert_box_wrap">
+                                    <div id="examples" class="max-height-example">
+                                        <div class="content mCustomScrollbar">
+                                            <div class="panel-group" id="accordion_alert" role="tablist" aria-multiselectable="true">
+                                              <div class="panel panel-default">
+                                                <div class="panel-heading active_alert" role="tab" id="headingOne_alert">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion_alert" href="#collapseOne_alert" aria-expanded="true" aria-controls="collapseOne_alert"><span class="alert_box red_alert_box"><span class="alert_box_title">Alert 1<i class="alert_arrow_trigger"></i><i class="alert_box_delete"></i></span></span></a>
+                                                </div>
+                                                <div id="collapseOne_alert" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_alert">
+                                                  <div class="panel-body">
+                                                    <div class="alert_box_content">
+                                                        <div class="alert_box_padd"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet suscipit nunc.<span class="alert_date">25 September 2015</span></p></div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingTwo_alert">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_alert" href="#collapseTwo_alert" aria-expanded="false" aria-controls="collapseTwo_alert"><span class="alert_box yellow_alert_box"><span class="alert_box_title">Alert 2<i class="alert_arrow_trigger"></i><i class="alert_box_delete"></i></span></span></a>
+                                                </div>
+                                                <div id="collapseTwo_alert" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_alert">
+                                                  <div class="panel-body">
+                                                    <div class="alert_box_content">
+                                                        <div class="alert_box_padd"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Aliquam.<span class="alert_date">25 September 2015</span></p></div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingThree_alert">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_alert" href="#collapseThree_alert" aria-expanded="false" aria-controls="collapseThree_alert"><span class="alert_box yellow_alert_box"><span class="alert_box_title">Alert 3<i class="alert_arrow_trigger"></i><i class="alert_box_delete"></i></span></span></a>
+                                                </div>
+                                                <div id="collapseThree_alert" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree_alert">
+                                                  <div class="panel-body">
+                                                    <div class="alert_box_content">
+                                                        <div class="alert_box_padd"><p>---</p></div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingFour_alert">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_alert" href="#collapseFour_alert" aria-expanded="false" aria-controls="collapseFour_alert"><span class="alert_box green_alert_box"><span class="alert_box_title">Alert 4<i class="alert_arrow_trigger"></i><i class="alert_box_delete"></i></span></span></a>
+                                                </div>
+                                                <div id="collapseFour_alert" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour_alert">
+                                                  <div class="panel-body">
+                                                    <div class="alert_box_content">
+                                                        <div class="alert_box_padd"><p>---</p></div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingFive_alert">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_alert" href="#collapseFive_alert" aria-expanded="false" aria-controls="collapseFive_alert"><span class="alert_box red_alert_box"><span class="alert_box_title">Alert 5<i class="alert_arrow_trigger"></i><i class="alert_box_delete"></i></span></span></a>
+                                                </div>
+                                                <div id="collapseFive_alert" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive_alert">
+                                                  <div class="panel-body">
+                                                    <div class="alert_box_content">
+                                                        <div class="alert_box_padd"><p>---</p></div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingSix_alert">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_alert" href="#collapseSix_alert" aria-expanded="false" aria-controls="collapseSix_alert"><span class="alert_box yellow_alert_box"><span class="alert_box_title">Alert 6<i class="alert_arrow_trigger"></i><i class="alert_box_delete"></i></span></span></a>
+                                                </div>
+                                                <div id="collapseSix_alert" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix_alert">
+                                                  <div class="panel-body">
+                                                    <div class="alert_box_content">
+                                                        <div class="alert_box_padd"><p>---</p></div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingSeven_alert">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_alert" href="#collapseSeven_alert" aria-expanded="false" aria-controls="collapseSeven_alert"><span class="alert_box green_alert_box"><span class="alert_box_title">Alert 7<i class="alert_arrow_trigger"></i><i class="alert_box_delete"></i></span></span></a>
+                                                </div>
+                                                <div id="collapseSeven_alert" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix_alert">
+                                                  <div class="panel-body">
+                                                    <div class="alert_box_content">
+                                                        <div class="alert_box_padd"><p>---</p></div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                	</div>
+                            	</div>
+                            </div>
+                            <div class="filter_box_title clearfix">
+                                <div class="col-sm-12">
+                                	<span class="filter_box_title_span"><i class="icon_sprite graph_icon"></i>Tool Box</span>
+                                </div>
+                            </div>
+                            <div class="sidebar_form_elements">
+                            	<div class="form_element filter_dropdown">
+                                	<select name="dropdown_element" id="dropdown_element" class="custom_select">
+                                    	<option value="">Item 01</option>
+                                        <option value="">Item 02</option>
+                                        <option value="">Item 03</option>
+                                        <option value="">Item 04</option>
+                                    </select>
+                                </div>
+                                <div class="form_element">
+                                	<input type="submit" name="form_btn_element" id="form_btn_element" value="Lorem Ipsum">
+                                </div>
+                                <div class="form_element topMar_20">
+                                	<input type="text" name="form_element_field" id="form_element_field" value="" placeholder="Input Text">
+                                </div>
+                                <div class="form_element_ul">
+                                	<ul>
+                                    	<li><a href="javascript:void(0);">Lorem ipsum dolor</a></li>
+                                        <li><a href="javascript:void(0);">Sed felis mauris</a></li>
+                                        <li><a href="javascript:void(0);">Donec magna sem</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mega Records Section -->
+                    <div class="mega_records dark_accordions">
+                    	<div class="panel-group" id="meag_recordAccordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading active_accord" role="tab" id="mega_recordheadingOne">
+                                	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#meag_recordAccordion" href="#mega_recordcollapseOne" aria-expanded="false" aria-controls="mega_recordcollapseOne">Leistungsbeschreibung<i class="accord_status_arrow"></i><i class="accord_closer"></i></a>
+                                </div>
+                                <div id="mega_recordcollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="mega_recordheadingOne">
+                                	<div class="panel-body">
+                                    	<table class="table table_panel_titles">
+                                            <thead>
+                                                <tr>
+                                                    <th>Pos</th>
+                                                    <th>Text</th>
+                                                    <th>Anz</th>
+                                                    <th>Ep</th>
+                                                    <th>GP</th>
+                                                    <th>&nbsp;</th>
+                                                    <th>&nbsp;</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    	<div id="examples2" class="max-height-example">
+                                            <div class="content mCustomScrollbar">
+                                                <div class="panel-group" id="mega_record_detail_accordian" role="tablist" aria-multiselectable="true">
+                                                  <div class="panel panel-default">
+                                                    <div class="panel-heading" role="tab" id="record_detail_headingOne">
+                                                        <a role="button" data-toggle="collapse" data-parent="#mega_record_detail_accordian" href="#record_detail_collapseOne" aria-expanded="true" aria-controls="record_detail_collapseOne" class="record_detail_trigger"></a>
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th><div class="mega_record_pos"><a href="javascript:void(0);">21334</a></div></th>
+                                                                    <th><div class="mega_record_name">Rasenmähen</div></th>
+                                                                    <th><div class="mega_record_sorting">01<i class="upper_sorting"></i><i class="below_sorting"></i></div></th>
+                                                                    <th><div class="mega_record_sorting">18,99<i class="upper_sorting"></i><i class="below_sorting"></i></div></th>
+                                                                    <th><div class="mega_record_sorting">09,91<i class="upper_sorting"></i><i class="below_sorting"></i></div></th>
+                                                                    <th>&nbsp;</th>
+                                                                    <th><div class="new_position_link"><a href="javascript:void(0);"><i></i>Neue Position</a></div></th>
+                                                                    <th><div class="remove_position_link"><a href="javascript:void(0);"><i></i>Löschen</a></div></th>
+                                                                    <th><div class="copy_that_link"><a href="javascript:void(0);"><i class="icon_sprite"></i>Kopieren in SAP</a></div></th>
+                                                                </tr>
+                                                            </thead>
+                                                        </table>
+                                                    </div>
+                                                    <div id="record_detail_collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="record_detail_headingOne">
+                                                      <div class="panel-body">
+                                                          <div class="mega_records_des_table">
+                                                             <div class="mega_records_table">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Buchungstext</th>
+                                                                            <th>Nettobetrag</th>
+                                                                            <th>StKz</th>
+                                                                            <th>Mehrwertsatz</th>
+                                                                            <th>Mehrwertbetrag</th>
+                                                                            <th>Bruttobetrag</th>
+                                                                            <th>Sachkonto</th>
+                                                                            <th>PSP-Element</th>
+                                                                            <th>WE</th>
+                                                                            <th>NKSL</th>
+                                                                            <th>AE</th>
+                                                                            <th>Bezug</th>
+                                                                            <th>&nbsp;</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                             </div>
+                                                          </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="panel panel-default">
+                                                    <div class="panel-heading" role="tab" id="record_detail_headingTwo">
+                                                        <a class="collapsed record_detail_trigger" role="button" data-toggle="collapse" data-parent="#mega_record_detail_accordian" href="#record_detail_collapseTwo" aria-expanded="false" aria-controls="record_detail_collapseTwo"></a>
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th><div class="mega_record_pos"><a href="javascript:void(0);">21334</a></div></th>
+                                                                    <th><div class="mega_record_name">Rasenmähen</div></th>
+                                                                    <th><div class="mega_record_sorting">01<i class="upper_sorting"></i><i class="below_sorting"></i></div></th>
+                                                                    <th><div class="mega_record_sorting">18,99<i class="upper_sorting"></i><i class="below_sorting"></i></div></th>
+                                                                    <th><div class="mega_record_sorting">09,91<i class="upper_sorting"></i><i class="below_sorting"></i></div></th>
+                                                                    <th>&nbsp;</th>
+                                                                    <th><div class="new_position_link"><a href="javascript:void(0);"><i></i>Neue Position</a></div></th>
+                                                                    <th><div class="remove_position_link"><a href="javascript:void(0);"><i></i>Löschen</a></div></th>
+                                                                    <th><div class="copy_that_link"><a href="javascript:void(0);"><i class="icon_sprite"></i>Kopieren in SAP</a></div></th>
+                                                                </tr>
+                                                            </thead>
+                                                        </table>
+                                                    </div>
+                                                    <div id="record_detail_collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="record_detail_headingTwo">
+                                                      <div class="panel-body">
+                                                          <div class="mega_records_des_table">
+                                                             <div class="mega_records_table">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Buchungstext</th>
+                                                                            <th>Nettobetrag</th>
+                                                                            <th>StKz</th>
+                                                                            <th>Mehrwertsatz</th>
+                                                                            <th>Mehrwertbetrag</th>
+                                                                            <th>Bruttobetrag</th>
+                                                                            <th>Sachkonto</th>
+                                                                            <th>PSP-Element</th>
+                                                                            <th>WE</th>
+                                                                            <th>NKSL</th>
+                                                                            <th>AE</th>
+                                                                            <th>Bezug</th>
+                                                                            <th>&nbsp;</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3001.0445/Winterdienst - 15.08</td>
+                                                                            <td>239,89</td>
+                                                                            <td>Q9</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>17105170</td>
+                                                                            <td>30010445-BK-U170</td>
+                                                                            <td>445</td>
+                                                                            <td>170</td>
+                                                                            <td>alle</td>
+                                                                            <td>01.08.2015</td>
+                                                                            <td align="right">
+                                                                                <div class="record_detail_actions">
+                                                                                    <i class="record_detail_add"></i>
+                                                                                    <i class="record_detail_remove"></i>
+                                                                                    <i class="icon_sprite record_detail_nxt"></i>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                             </div>
+                                                          </div>
+                                                       </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="mega_recordheadingTwo">
+                                	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#meag_recordAccordion" href="#mega_recordcollapseTwo" aria-expanded="false" aria-controls="mega_recordcollapseTwo">Lorem Ipsum Simply<i class="accord_status_arrow"></i><i class="accord_closer"></i></a>
+                                </div>
+                                <div id="mega_recordcollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mega_recordheadingTwo">
+                                	<div class="panel-body"><p>-----</p></div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="mega_recordheadingthree">
+                                	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#meag_recordAccordion" href="#mega_recordcollapseThree" aria-expanded="false" aria-controls="mega_recordcollapseThree">More then a dummy<i class="accord_status_arrow"></i><i class="accord_closer"></i></a>
+                                </div>
+                                <div id="mega_recordcollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mega_recordheadingthree">
+                                	<div class="panel-body"><p>-----</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mega Records Section -->
+                </div>
+            </div>
+        </article>
+    </section>
+    <!-- Main Content Ends -->
+    </body>
+    <!-- ********************************************* -->
+
+    
+    <!-- Custom Select JS Files -->
+    <script type="text/javascript" src="js/customise_select.js"></script>
+    <!-- Custom Select JS Files -->
+    
+    <!-- Custom Scrollbar JS Files -->
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Custom Scrollbar JS Files -->
+
+    <!-- Accordian Class Function -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Accordian Class Function -->
+
+</html>

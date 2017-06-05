@@ -1,0 +1,77 @@
+.s-hidden {
+	width: 100%;
+	visibility: hidden;
+	padding: 7.5px;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+}
+.select {
+	cursor: pointer;
+	position: relative;
+}
+.styledSelect {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	line-height: 1;
+	text-transform: uppercase;
+	background-color: #f3f3f4;
+	padding: 11px 41px 11px 11px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.styledSelect::after {
+	display: block;
+	content: '';
+	position: absolute;
+	width: 32px;
+	top: 0px;
+	bottom: 0;
+	right: 0;
+	background-color: #414141;
+}
+.styledSelect::before {
+	dipslay: block;
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-width: 0 1px 1px 0;
+	border-style: solid;
+	border-color: #ffffff;
+	position: absolute;
+	top: 14px;
+	right: 13px;
+	z-index: 1;
+	-webkit-transform: rotateZ(45deg);
+	   -moz-transform: rotateZ(45deg);
+		-ms-transform: rotateZ(45deg);
+		 -o-transform: rotateZ(45deg);
+			transform: rotateZ(45deg);
+}
+.options {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	margin: 0 0;
+	padding: 0 0;
+	list-style: none;
+	border: 1px solid #dddddd;
+	background-color: #ffffff;
+	max-height: 130px;
+	overflow: auto;
+}
+.options li {
+	padding: 8px 10px;
+	margin: 0;
+	text-transform: uppercase;
+}
+.options li:hover {
+	background-color: #e50811;
+	color: #ffffff;
+}
